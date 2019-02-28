@@ -19,7 +19,7 @@ function draw() {
         const a = angle + offset
         const h = map(Math.sin(a), -1, 1, 0, height/2)
         rect(x - width / 2, 0, rectW, h)
-        offset += 0.134
+        offset += 0.04
     }
 
     angle += 0.1
