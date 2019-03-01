@@ -22,7 +22,7 @@ function draw() {
         offset += 0.04
     }
 
-    angle += 0.1
+    angle += 0.05
 }
 
 function windowResized() {
