@@ -40,23 +40,21 @@ function generateRandomColor() {
     return [r, g, b]
 }
 
-class Ball {
-    constructor(x, y, speed) {
-        console.log(`${x} ${y} ${speed}`)
-        this.x = x
-        this.y = y
-        this.r = 4
-        this.speedX = this.speedY = speed
-        this.color = generateRandomColor()
+class Blob {
+    PVector 
+    constructor(x, y) {
+        this.pos = createVector(x, y);
+        this.r = 40
     }
 
     display() {
-        fill(...this.color)
-        ellipse(this.x, this.y, this.r)
+        noFill()
+        stroke(255)
+        ellipse(this.pos.x, this.pos.y, this.r*2, this.r*2)
     }
 
     update() {
-        if (this.x + this.speedX > width || this.x + this.speedX < 0) {
+        /*if (this.x + this.speedX > width || this.x + this.speedX < 0) {
             this.speedX *= -1
         } else {
             this.x += this.speedX
@@ -66,6 +64,6 @@ class Ball {
             this.speedY *= -1
         } else {
             this.y += this.speedY
-        }
+        }*/
     }
 }
